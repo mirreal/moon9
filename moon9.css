@@ -1,3 +1,150 @@
-canvas {
-	border:4px solid black;
+* { margin: 0; padding: 0; }
+html,body { height: 100%; width: 100%; }
+
+body {
+	background:-webkit-linear-gradient(top left, #C63, #CC6);
+	background:-moz-linear-gradient(top left, #C63, #CC6);
+	font-family:Verdana, Arial, sans-serif;
+}
+
+canvas { 
+	display: block;
+}
+
+p {
+	margin: 0px 20px;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a.button {
+	background: #185da8;
+	border-radius: 5px;
+	display: block;
+	font-family:Verdana, Arial, sans-serif;
+	font-size: 32px;
+	margin: 40px 0 0 180px;
+	padding: 10px;
+	width: 200px;
+	transition: all 0.6s ease-in 0.6s;
+}
+
+a.button:hover {
+	background: #2488f5;
+	color: #fff;
+	text-decoration: none;
+	/-webkit-transform: rotate(720deg);
+	transition: all 1.2s ease-in 0.2s;
+}
+
+footer {
+	font-family:AR BERKLEY;
+	margin-top:20px;
+	margin-left:360px;
+	width:300px;
+}
+
+
+#game {
+	width:600px;
+	height:590px;
+	color:#FFF;
+	background:#000;
+	margin-left:20%;
+	border-radius: 4px;
+	-webkit-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4), -4px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+#introduction {
+	text-align:center;
+	font-size:36px;
+}
+
+#headerStats {
+	font-size:36px;
+}
+
+#headerLevel {
+	float:left;
+	margin-left:20px;
+	width:200px;
+}
+
+#headerScore {
+	width:100px;
+	margin-left:500px;
+}
+
+#gameUI {
+	position: absolute; /* Places UI on top of the canvas */
+	width: 600px;
+	height: 400px;
+}
+
+#gameIntro {
+	font-family:AR CHRISTY;
+	font-size:16px;
+	color:#CCC;
+	padding: 30px 0;
+	text-align: center;
+}
+
+#up, #down {
+	background:rgba(255,255,255,0.2);
+	border:none;
+	border-radius:10px;
+	font-size:48px;
+	box-shadow:rgba(0,0,0,0.3) 4px 4px 0px 0px;
+	margin-left:500px;
+	margin-top:60px;
+	padding:20px;
+}
+#up {
+	margin-top:60px;
+}
+#down {
+	margin-top:85px;
+}
+#up:hover, #down:hover {
+	background: #2488f5;
+	color: #fff;
+	text-decoration: none;
+}
+
+#gameComplete {
+	font-family:AR CHRISTY;
+	font-size:36px;
+	color:#FFF;
+	background: rgba(0, 0, 0, 0.2);
+	margin-top: 70px;
+	padding-top:5px;
+	padding-bottom:10px;
+	text-align: center;
+}
+
+#timeLine {
+	margin-top:170px;
+	position:absolute;
+}
+
+#moon9 {
+	margin-top:0px;
+}
+
+#levelFrame {
+	float:left;
+	margin-top:5px;
+	margin-left:5px;
+}
+
+.stress {
+	color:#C03;
+	font-size:24px;
 }

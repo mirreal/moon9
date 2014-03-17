@@ -3,15 +3,58 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Moon Nine</title>
+		<link rel="icon" href="favicon.ico">
 		<link rel="stylesheet" href="moon9.css">
 		<script src="moon9.js"></script>
 	</head>
 	<body>
-	<form>
-		<input type="button" id="play" value="Play">
-	</form>
-	<canvas id="moon9" width="600" height="400"></canvas>
-	<p id="upLength">Up length</p>
-	<p id="downLength">Down length</p>
+		<div id="game">
+			<header id="gameTitle">
+				<img src="yes.png">
+			</header>
+			
+			<div id="statusLine">
+				<div id="introduction">Introduction</div>
+				<div id="headerStats">
+					<p id="headerLevel">LEVEL <span id="selectLevel"></span></p>
+					<p id="headerScore">0</p>
+				</div>
+			</div>
+		
+			<div id="gameUI">
+				<div id="gameIntro">
+					<p>This is one of the <span class="stress">simplest</span> games you've played.</p>
+					<p>You'll see two panes with dots: <span class="stress">which one has more?</span></p>
+					<p>Decide by pushing your navigation buttons <span class="stress">↑</span> or <span class="stress">↓</span>.</p>
+					<p>Plus, <span class="stress">do it as quickly you can</span>: you've got <span class="stress">1 minute</span> to make as many decisions as you can. The grey line in the middle indicates the remaining game time.</p>
+					<p>For each correct answer you get 1 point. For each wrong one: you lose 1.</p>
+					<p><a id="gamePlay" class="button" href="">Play</a></p>
+				</div>
+				<div id="gameStats">
+					<form id="command">
+						<input type="button" id="up" value="↑">
+						<input type="button" id="down" value="↓">
+					</form>
+				</div>
+				<div id="gameComplete">
+                    <p>Your score is: <span id="gameScore">0</span></p>
+                    <p><a id="gameReset" class="button" href="">Play again</a></p>
+                </div>
+			</div>
+			
+			<canvas id="timeLine" width="600" height="60"></canvas>
+			<canvas id="moon9" width="600" height="400"></canvas>
+			
+			<div id="levelFrame">
+				<label for="level">Select level: </label>
+				<select id="level">
+					<option value="1">level-1</option>
+					<option value="2" selected="selected">level-2</option>
+					<option value="3">level-3</option>
+					<option value="4">level-4</option>
+				</select>
+			</div>
+			<footer id="copyright">Copyright © <a href="http://www.mirreal.net">Mirreal's Notes</a> 2013</footer>
+		</div>
 	</body>
 </html>
