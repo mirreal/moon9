@@ -1,0 +1,22 @@
+body {
+    background: #DDD;
+}
+
+canvas {
+    margin-left: 24px;
+    background: #EEE;
+    border: thin solid #aaa;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+#pause-button {
+	position: absolute;
+	top: 600px;
+	left: 600px;
+	color: grey;
+	background: rgba(255,255,255,0.2);
+	border: none;
+	border-radius: 4px;
+	box-shadow: rgba(0,0,0,0.2) 4px 4px 0px 0px;
+	padding: 4px;
+}
