@@ -2,21 +2,30 @@ body {
     background: #DDD;
 }
 
-canvas {
+canvas, img {
     margin-left: 24px;
     background: #EEE;
     border: thin solid #aaa;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-#pause-button {
+a.button {
 	position: absolute;
 	top: 600px;
 	left: 600px;
+	width: 60px;
+	padding: 4px;
+	text-align: center;
+	text-decoration: none;
 	color: grey;
 	background: rgba(255,255,255,0.2);
 	border: none;
 	border-radius: 4px;
 	box-shadow: rgba(0,0,0,0.2) 4px 4px 0px 0px;
-	padding: 4px;
+	transition: all 0.6s ease-in 0.6s;
+}
+
+a.button:hover {
+	background: rgba(255,255,255,0.6);
+	transition: all 1.2s ease-in 0.2s;
 }

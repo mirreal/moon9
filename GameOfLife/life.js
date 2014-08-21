@@ -1,7 +1,5 @@
 function Game() {
   this.stones = [];
-  this.pause = false;
-
   this.canvas = new Canvas();
 
   this.init();
@@ -17,8 +15,7 @@ Game.prototype.init = function() {
 
   this.eventHandler();
   
-  setInterval(function() {
-    if (self.pause === true) return;
+  this.loop = setInterval(function() {
     self.update();
     self.draw();
   }, 800);
@@ -27,13 +24,31 @@ Game.prototype.init = function() {
 Game.prototype.eventHandler = function() {
   var self = this;
 
-  var pauseButton = document.getElementById('pause-button');
-  pauseButton.onclick = function() {
-    self.pause = !self.pause;
-    if (pauseButton.value == 'pause') pauseButton.value = 'continue';
-    else pauseButton.value = 'pause';
-  }
-}
+  var snapshotButton = document.getElementById('snapshotButton'),
+      snapshotImageElement = document.getElementById('snapshotImageElement'),
+      canvas = document.getElementById('canvas');
+
+  snapshotButton.onclick = function(event) {
+    event.preventDefault();
+
+    if (snapshotButton.innerHTML == 'Snapshot') {
+      clearInterval(self.loop);
+      var dataUrl = canvas.toDataURL();
+      snapshotImageElement.src = dataUrl;
+      snapshotImageElement.style.display = 'inline';
+      canvas.style.display = 'none';
+      snapshotButton.innerHTML = 'Continue';
+    } else {
+      self.loop = setInterval(function() {
+        self.update();
+        self.draw();
+      }, 800);
+      canvas.style.display = 'inline';
+      snapshotImageElement.style.display = 'none';
+      snapshotButton.innerHTML = 'Snapshot';
+    }
+  };
+};
 
 Game.prototype.createRandomStones = function() {
   for (var i = 0; i < 32; i++) {
@@ -126,6 +141,7 @@ function Canvas() {
 }
 
 Canvas.prototype.drawGrid = function(color, stepx, stepy) {
+  var canvas = this.canvas;
   var ctx = this.context;
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
