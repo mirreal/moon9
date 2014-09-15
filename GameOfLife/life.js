@@ -18,7 +18,7 @@ Game.prototype.init = function() {
   this.loop = setInterval(function() {
     self.update();
     self.draw();
-  }, 800);
+  }, 120);
 };
 
 Game.prototype.eventHandler = function() {
