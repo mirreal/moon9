@@ -42,7 +42,7 @@ Game.prototype.eventHandler = function() {
       self.loop = setInterval(function() {
         self.update();
         self.draw();
-      }, 800);
+      }, 120);
       canvas.style.display = 'inline';
       snapshotImageElement.style.display = 'none';
       snapshotButton.innerHTML = 'Snapshot';
@@ -127,9 +127,9 @@ Stone.prototype.getAround = function() {
   for (var i = this.x-1; i <= this.x+1; i++) {
     for (var j = this.y-1; j <= this.y+1; j++) {
       if (i == this.x && j == this.y) continue;
-      if (i < 0 || i >= 32) continue;
-      if (j < 0 || j >= 32) continue;
-      this.around.push({x: i, y: j});
+      //if (i < 0 || i >= 32) continue;
+      //if (j < 0 || j >= 32) continue;
+      this.around.push({x: (i+32)%32, y: (j+32)%32});
     }
   }
 };
