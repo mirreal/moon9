@@ -167,7 +167,7 @@ Canvas.prototype.drawGrid = function(color, stepx, stepy) {
     ctx.stroke();
     ctx.closePath();
   }
-  
+
   for (var i = stepy + 0.5; i < ctx.canvas.height; i += stepy) {
     ctx.beginPath();
     ctx.moveTo(0, i);

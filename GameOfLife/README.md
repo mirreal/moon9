@@ -1,4 +1,4 @@
-#Game of Life
+# Game of Life
 
 生命游戏，数学家John Conway发明的一个游戏，又称生命棋，康威生命演化，细胞自动机。
 
