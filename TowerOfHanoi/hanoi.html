@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hanoi</title>
+        <link rel="icon" href="favicon.ico" />
+        <link rel="stylesheet" href="hanoi.css">
+    </head>
+    <body>
+        <div id="content">
+            <canvas id="canvas" width="600" height="400">Your browser does not support Canvas.</canvas>
+            <fieldset>
+                <label>Select Disks: </label>
+                <select id="level">
+                    <option value="3"> 3 </option>
+                    <option value="4" selected="selected"> 4 </option>
+                    <option value="5"> 5 </option>
+                    <option value="6"> 6 </option>
+                    <option value="7"> 7 </option>
+                    <option value="8"> 8 </option>
+                    <option value="9"> 9 </option>
+                </select>
+                <input id="play-button" type="button" value="Play">
+                <input id="watch-button" type="button" value="Watch">
+            </fieldset>
+        </div>
+        <script src="hanoi.js"> </script>
+    </body>
+</html>
