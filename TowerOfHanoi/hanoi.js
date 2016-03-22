@@ -90,14 +90,14 @@ Game.prototype.move = function(data) {
   }
   this.canvas.cursor = this.canvas.cursor[data];
   this.draw();
-}
+};
 
 Game.prototype.cursorUp = function() {
   if (this.isWatched) return;
   this.checkedTower = null;
   this.canvas.cursorShow = true;
   this.draw();
-}
+};
 
 Game.prototype.cursorDown = function() {
   if (this.isWatched) return;
@@ -106,7 +106,7 @@ Game.prototype.cursorDown = function() {
     this.canvas.cursorShow = false;
     this.draw();
   }
-}
+};
 
 Game.prototype.solutionShow = function() {
   var self = this;
@@ -168,15 +168,15 @@ Canvas.prototype.drawGrid = function(color, stepx, stepy) {
     ctx.closePath();
   }
 
-  for (var i = stepy + 0.5; i < ctx.canvas.height; i += stepy) {
+  for (var j = stepy + 0.5; j < ctx.canvas.height; j += stepy) {
     ctx.beginPath();
-    ctx.moveTo(0, i);
-    ctx.lineTo(ctx.canvas.width, i);
+    ctx.moveTo(0, j);
+    ctx.lineTo(ctx.canvas.width, j);
     ctx.stroke();
     ctx.closePath();
   }
   ctx.restore();
-}
+};
 
 Canvas.prototype.drawDisk = function(tower) {
   var self = this;
@@ -207,7 +207,7 @@ Canvas.prototype.drawDisk = function(tower) {
     ctx.stroke();
   }
   ctx.restore();
-}
+};
 
 
 function EventHandler() {
@@ -218,12 +218,12 @@ function EventHandler() {
 
 EventHandler.prototype.addHandler = function(event, callback) {
   this.events[event] = callback;
-}
+};
 
 EventHandler.prototype.handle = function(event, data) {
   var callback = this.events[event];
   if (callback) callback(data);
-}
+};
 
 EventHandler.prototype.listen = function() {
   var self = this;

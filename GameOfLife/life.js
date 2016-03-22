@@ -104,7 +104,7 @@ Game.prototype.update = function() {
     stone.status = stone.nextStatus;
     stone.aliveCount = 0;
   });
-}
+};
 
 
 

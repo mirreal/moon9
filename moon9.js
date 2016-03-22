@@ -4,14 +4,14 @@ window.onload = function() {
   var timeLine = document.getElementById("timeLine");
   var context = timeLine.getContext("2d");
 
-  //game Settings
+  // game Settings
   var score;
   var timeWidth;
   var comp;
   var a;
   var b;
 
-  //geme UI
+  // geme UI
   var headerStats = document.getElementById("headerStats");
   var headerScore = document.getElementById("headerScore");
   var selectLevel = document.getElementById("selectLevel");
@@ -216,6 +216,7 @@ function drawArrowUp(ctx) {
   ctx.closePath();
   ctx.fill();
 }
+
 function drawArrowDown(ctx) {
   ctx.fillStyle = "white";
   ctx.fillRect(420,250,60,40);

@@ -17,7 +17,7 @@ Demo 地址：[http://sandbox.runjs.cn/show/jyq2gb5n](http://sandbox.runjs.cn/sh
 
 Demo 地址：[http://sandbox.runjs.cn/show/z8ofnxng](http://sandbox.runjs.cn/show/z8ofnxng "http://sandbox.runjs.cn/show/z8ofnxng")
 
-## Tower of Hanoi
+## 3.Tower of Hanoi
 
 汉诺塔游戏版本，和一个可视化解决方案展示。
 
