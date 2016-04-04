@@ -9,8 +9,8 @@ function hanoiSolve(n, start, stop, end) {
 }
 
 var n = 3,
-  start = "A",
-  stop = "B",
-  end = "C";
+    start = "A",
+    stop = "B",
+    end = "C";
 
 hanoiSolve(n, start, stop, end);
