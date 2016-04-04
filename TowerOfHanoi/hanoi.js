@@ -62,7 +62,7 @@ Game.prototype.succuss = function() {
 Game.prototype.draw = function() {
   var self = this;
 
-  this.canvas.drawGrid("lightgrey", 20, 20);
+  this.canvas.drawGrid('lightgrey', 20, 20);
   this.towers.forEach(function(tower) {
     self.canvas.drawDisk(tower);
   });
@@ -228,7 +228,7 @@ EventHandler.prototype.handle = function(event, data) {
 EventHandler.prototype.listen = function() {
   var self = this;
 
-  document.addEventListener("keydown", function (event) {
+  document.addEventListener('keydown', function (event) {
     event.preventDefault();
     switch (event.keyCode) {
       case 37:

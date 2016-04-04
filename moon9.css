@@ -100,6 +100,7 @@ footer {
 	background:rgba(255,255,255,0.2);
 	border:none;
 	border-radius:10px;
+	outline: 0;
 	font-size:48px;
 	box-shadow:rgba(0,0,0,0.3) 4px 4px 0px 0px;
 	margin-left:500px;

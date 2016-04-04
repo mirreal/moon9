@@ -62,7 +62,7 @@ Game.prototype.createRandomStones = function() {
 Game.prototype.draw = function() {
   var self = this;
 
-  this.canvas.drawGrid("lightgrey", 20, 20);
+  this.canvas.drawGrid('lightgrey', 20, 20);
   this.stones.forEach(function(stone) {
     if (stone.status === true) {
       self.canvas.drawStone(stone);
